@@ -1,4 +1,6 @@
 import { Component } from '@angular/core'
+import { OnesignalService } from './services/onesignal/onesignal.service'
+import { Platform } from '@ionic/angular'
 
 @Component({
     selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core'
     styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-    constructor() {}
+    constructor(
+        private platform: Platform,
+        private onesignal: OnesignalService
+    ) {
+        this.platform.ready().then(() => {
+            this.onesignal.oneSignalInit()
+        })
+    }
 }

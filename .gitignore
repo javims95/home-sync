@@ -70,3 +70,4 @@ Thumbs.db
 # Protected
 android/app/google-services.json
 api/home-sync-72fd0-firebase-adminsdk-bggxi-fd25c7c80a.json
+src/environments/protected.ts
